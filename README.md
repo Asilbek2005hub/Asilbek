@@ -1,2 +1,42 @@
-# Asilbek
-Salom
+import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Input } from "@/components/ui/input"; import { MotionConfig, motion } from "framer-motion";
+
+const PersonalFreelanceSite = () => { return ( <div className="min-h-screen bg-gray-50 flex flex-col items-center py-10"> {/* Header */} <header className="w-full max-w-4xl text-center mb-12"> <h1 className="text-5xl font-bold text-gray-800 mb-4">Ilgizcha – Yozish va Marketing Xizmatlari</h1> <p className="text-lg text-gray-600">Yozish, marketing va kontent yaratish xizmatlari uchun eng yaxshi tanlov</p> </header>
+
+{/* Services Section */}
+  <section className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mb-16">
+    <Card className="p-6 shadow-lg bg-white">
+      <CardContent>
+        <h2 className="text-2xl font-semibold text-gray-700">Matn Yozish</h2>
+        <p className="text-gray-600 mt-2">Blog maqolalari, sotuv matnlari, e-mail marketing va ko'plab boshqa yozuv xizmatlari.</p>
+        <Button className="mt-4">Batafsil</Button>
+      </CardContent>
+    </Card>
+
+    <Card className="p-6 shadow-lg bg-white">
+      <CardContent>
+        <h2 className="text-2xl font-semibold text-gray-700">Marketing Strategiyalari</h2>
+        <p className="text-gray-600 mt-2">SEO, ijtimoiy media marketing, kontent strategiyasi va reklama kampaniyalari.</p>
+        <Button className="mt-4">Batafsil</Button>
+      </CardContent>
+    </Card>
+  </section>
+
+  {/* Contact Form */}
+  <section className="w-full max-w-2xl bg-white shadow-lg p-8 rounded-2xl mb-10">
+    <h3 className="text-3xl font-semibold text-gray-700 mb-6">Aloqa</h3>
+    <Input placeholder="Ismingiz" className="mb-4" />
+    <Input placeholder="Email manzilingiz" className="mb-4" />
+    <textarea placeholder="Xabaringiz" className="w-full p-4 rounded-lg border border-gray-300 mb-4" rows="5"></textarea>
+    <Button className="w-full">Yuborish</Button>
+  </section>
+
+  {/* Footer */}
+  <footer className="text-gray-500 text-center mt-auto">
+    © 2025 Ilgizcha. Barcha huquqlar himoyalangan.
+  </footer>
+</div>
+
+); };
+
+export default PersonalFreelanceSite;
+
